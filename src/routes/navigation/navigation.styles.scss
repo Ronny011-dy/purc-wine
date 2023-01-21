@@ -1,0 +1,30 @@
+.navigation {
+  background-color: whitesmoke;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-container {
+    margin: 10px;
+
+    .logo {
+      height: 100px;
+      width: auto;
+    }
+  }
+
+  .nav-links-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .nav-link {
+      cursor: pointer;
+      padding-right: 15px;
+    }
+  }
+}

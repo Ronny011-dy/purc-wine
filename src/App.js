@@ -1,39 +1,27 @@
-import CategoriesContainer from './components/categories-container/categories-container.component';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './routes/hp/hp.component.jsx';
+import Navigation from './routes/navigation/navigation.component.jsx';
+import SignIn from './routes/sign-in/sign-in.component.jsx';
 
-const App = () => {
-  const categories = [
-    {
-      id: 1,
-      title: 'Red',
-      imageUrl:
-        'https://vinero.hk/wp-content/uploads/2021/09/Purcari-Malbec-de-Purcari-6-x-750ml.jpg',
-    },
-    {
-      id: 2,
-      title: 'White',
-      imageUrl:
-        'https://vinero.hk/wp-content/uploads/2021/09/Purcari-Viorica-de-Purcari-6-x-750ml.jpg',
-    },
-    {
-      id: 3,
-      title: 'Rosé',
-      imageUrl:
-        'https://vinero.hk/wp-content/uploads/2021/09/Purcari-1827-Rose-6-x-750ml.jpg',
-    },
-    {
-      id: 4,
-      title: 'Bubbles',
-      imageUrl:
-        'https://vinero.hk/wp-content/uploads/2021/09/Cuvee-de-Purcari-Alb-Brut-Spumant-6-x-750ml.jpg',
-    },
-    {
-      id: 5,
-      title: 'Specials',
-      imageUrl:
-        'https://vinero.hk/wp-content/uploads/2021/09/Purcari-Vinohora-Feteasca-Neagra-Montepulciano-6-x-750ml.jpg',
-    },
-  ];
-  return <CategoriesContainer categories={categories} />;
-};
+const App = () => (
+  <Routes>
+    <Route path="/" element={<Navigation />}>
+      <Route index element={<HomePage />} />
+      <Route path="sign-in" element={<SignIn />} />
+    </Route>
+  </Routes>
+);
 
 export default App;
+
+// react hooks - learn and use
+//     use state
+//     use effect
+//     use memo
+//     useref (input components) - search
+// typescript - need to learn
+// styled components - same as inline styles?
+// async await
+// JSX - passing properties, inline styles, more?
+// array methods (map, filter) - basic pipelines
+// redux will be mentioned so go over that

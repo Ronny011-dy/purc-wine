@@ -5,9 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-style: none solid;
+  border-style: none solid none none;
   border-color: #af9800;
-  border-radius: 10px;
   margin: 0 7.5px 15px;
   overflow: hidden;
 
@@ -15,12 +14,8 @@
     cursor: pointer;
 
     & .background-image {
-      transform: scale(1.1);
-      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-    }
-
-    & .category-body-container {
-      opacity: 0.9;
+      transform: scale(1.06);
+      transition: transform 5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
   }
 
@@ -51,23 +46,64 @@
       height: 30px;
       width: 250px;
       justify-content: center;
-      background-color: #af98008c;
       position: absolute;
-      margin-top: 75%;
+      margin-top: 90%;
       padding: 5px;
       align-items: center;
       display: flex;
       border-radius: 10px;
-      box-shadow: #af980034 0px 5px, #af980020 0px 10px, #af980029 0px 15px,
-        #af980011 0px 20px;
 
       h2 {
-        font-weight: bold;
-        font-size: 22px;
-        color: #ffffff;
+        font-style: italic;
+        font-size: 1.8em;
+        color: #000000;
         margin: auto;
-        text-shadow: 0.1em 0.1em 0 rgb(88, 0, 0);
       }
+
+      h2:before {
+        content: '';
+        position: absolute;
+        top: 65%;
+        left: 0;
+        border-top: 1px solid black;
+        width: 20%;
+        transform: translateY(-50%);
+      }
+      h2:after {
+        content: '';
+        position: absolute;
+        top: 65%;
+        right: 0;
+        border-top: 1px solid black;
+        width: 20%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.slot5 {
+  border-style: none;
+}
+
+@media only screen and (max-width: 1400px) {
+  .category-body-container h2 {
+    font-size: 20px !important;
+  }
+
+  .category-body-container h2:before {
+    border: none !important;
+  }
+
+  .category-body-container h2:after {
+    border: none !important;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .category-body-container {
+    h2 {
+      font-size: 35px;
     }
   }
 }

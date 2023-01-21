@@ -1,6 +1,9 @@
 .categories-container {
+  padding-top: 15px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  background-color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
