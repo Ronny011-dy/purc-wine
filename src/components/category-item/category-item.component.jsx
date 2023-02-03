@@ -1,4 +1,5 @@
 import './category-item.styles.scss';
+import specials from '../../assets/special.png';
 
 const CategoryItem = ({ category }) => {
   const { imageUrl, title, id } = category;
