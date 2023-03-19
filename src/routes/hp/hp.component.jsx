@@ -3,44 +3,45 @@ import { Fragment } from 'react';
 
 import CategoriesContainer from '../../components/categories-container/categories-container.component';
 
+import redWine from '../../assets/red.png';
+import whiteWine from '../../assets/white.png';
+import roseWine from '../../assets/rose.png';
+import bubbleWine from '../../assets/bubbles.png';
+import specialWine from '../../assets/special.png';
+
 const HomePage = () => {
   const categories = [
     {
       id: 1,
       title: 'Red',
-      imageUrl:
-        'http://localhost:3000/static/media/red.67738b7d126de39e2fdd.png',
+      imageUrl: redWine,
     },
     {
       id: 2,
       title: 'White',
-      imageUrl:
-        'http://localhost:3000/static/media/white.a9168921cd17b703ea0e.png',
+      imageUrl: whiteWine,
     },
     {
       id: 3,
       title: 'Rosé',
-      imageUrl:
-        'http://localhost:3000/static/media/rose.a18f20c365964ef5c0d6.png',
+      imageUrl: roseWine,
     },
     {
       id: 4,
       title: 'Bubbles',
-      imageUrl:
-        'http://localhost:3000/static/media/bubbles.bc070158c112cffce905.png',
+      imageUrl: bubbleWine,
     },
     {
       id: 5,
       title: 'Specials',
-      imageUrl:
-        'http://localhost:3000/static/media/special.9b6dcc0ea85c7a22a324.png',
+      imageUrl: specialWine,
     },
   ];
   return (
-    <Fragment>
+    <>
       <HeroBanner />
       <CategoriesContainer categories={categories} />
-    </Fragment>
+    </>
   );
 };
 

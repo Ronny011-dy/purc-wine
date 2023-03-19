@@ -1,4 +1,14 @@
 .email-password-title {
-  color: whitesmoke;
   font-style: italic;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .button {
+    width: 30%;
+  }
 }

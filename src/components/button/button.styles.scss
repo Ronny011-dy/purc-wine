@@ -1,0 +1,63 @@
+:root {
+  --google-blue: rgb(66, 133, 244);
+  --size-var: 3vw;
+
+  .button {
+    border: none;
+    font-size: 17px;
+    padding: 15px;
+    font-weight: 700;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    border-radius: 1px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.165);
+      cursor: pointer;
+    }
+  }
+
+  .button.primary {
+    background-color: #af9800;
+    color: whitesmoke;
+    &:hover {
+      border: solid 1px #af9800;
+      background-color: whitesmoke;
+      border-radius: 1px;
+      color: black;
+      margin: 14px;
+    }
+  }
+
+  .button.google {
+    background-color: rgb(66, 133, 244);
+    border: none;
+    font-size: 17px;
+    font-weight: 700;
+    color: whitesmoke;
+    position: relative;
+    border-radius: 5px;
+
+    &::after {
+      background-image: url('../../assets/google-icon.png');
+      background-size: calc(var(--size-var) - 1vw) calc(var(--size-var) - 1vw);
+      background-repeat: no-repeat;
+      width: calc(var(--size-var) - 1vw);
+      height: calc(var(--size-var) - 1vw);
+      content: '';
+      display: inline-block;
+      margin-left: 15px;
+    }
+
+    &:hover {
+      border: solid 1px var(--google-blue);
+      background-color: whitesmoke;
+      color: black;
+      margin: 14px;
+    }
+  }
+}

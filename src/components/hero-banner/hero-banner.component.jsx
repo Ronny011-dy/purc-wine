@@ -8,7 +8,7 @@ const HeroBanner = () => (
       backgroundImage: `url("${banner}")`,
     }}
   >
-    <p>“Wine is the answer. I just don’t remember the question.”</p>
+    <p>Cultivating rich Moldovian wine tradition since 1827</p>
   </div>
 );
 

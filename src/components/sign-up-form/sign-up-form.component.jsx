@@ -5,7 +5,8 @@ import {
   createUserDocumentFromAuth,
 } from '../../utils/firebase/firebase.utils';
 
-import FormInput from '../form-input/form-input.component';
+import FormInput from '../form-input-field/form-input.component';
+import Button from '../button/button.component';
 
 import './sign-up-form.styles.scss';
 
@@ -23,6 +24,7 @@ const SignUpForm = () => {
     const confirmPasswordLocal = confirmPassword.current.value;
     const displayNameLocal = displayName.current.value;
     e.target.reset();
+    // input checks
     if (passwordLocal !== confirmPasswordLocal) {
       alert('Please make sure both passwords are matching');
       return;
@@ -46,14 +48,10 @@ const SignUpForm = () => {
 
   return (
     <div>
+      <h2>Create an account</h2>
       <h3 className="email-password-title">Sign up with Email and Password</h3>
       <form onSubmit={handleSubmit}>
-        <FormInput
-          label="Display Name"
-          type="text"
-          required
-          ref={displayName}
-        />
+        <FormInput label="Full Name" type="text" required ref={displayName} />
         <FormInput label="Email" type="email" required ref={email} />
         <FormInput
           label="Password"
@@ -73,7 +71,9 @@ const SignUpForm = () => {
           maxLength="10"
           autoComplete="new-password"
         />
-        <button type="submit">Sign Up</button>
+        <Button classtype="submit" kind="primary">
+          Sign Up
+        </Button>
       </form>
     </div>
   );

@@ -1,7 +1,5 @@
 import SignUpForm from '../../components/sign-up-form/sign-up-form.component';
-
-import { useEffect } from 'react';
-import { getRedirectResult } from 'firebase/auth';
+import Button from '../../components/button/button.component';
 
 import {
   auth,
@@ -12,16 +10,21 @@ import {
 import './sign-in.styles.scss';
 
 const SignIn = () => {
+  // calls firebase utils
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopup();
     const userDocRef = await createUserDocumentFromAuth(user);
   };
 
   return (
-    <div className="sign-in-container">
-      <h2 className="google-title">Register an account</h2>
-      <button onClick={logGoogleUser}>Sign in with Google</button>
-      <SignUpForm />
+    <div className="wrapper">
+      <div className="sign-in-container">
+        <h2 className="title">Sign up with a new account</h2>
+        <Button className="button google" onClick={logGoogleUser}>
+          Sign in with
+        </Button>
+        <SignUpForm />
+      </div>
     </div>
   );
 };

@@ -1,14 +1,8 @@
 body {
   margin: 0;
-  font-family: 'Playfair Display', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(84, 0, 0);
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 a {
@@ -18,4 +12,6 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: 'EB Garamond', serif;
+  transition-timing-function: ease-in-out;
 }

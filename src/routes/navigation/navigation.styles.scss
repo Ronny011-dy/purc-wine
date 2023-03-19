@@ -5,13 +5,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  position: relative;
+  z-index: 10;
 
   .logo-container {
     margin: 10px;
 
     .logo {
-      height: 100px;
+      height: 4.8vw;
       width: auto;
+      max-height: 100px;
     }
   }
 
@@ -25,6 +29,11 @@
     .nav-link {
       cursor: pointer;
       padding-right: 15px;
+      font-size: min(1vw, 22px);
+
+      &:hover {
+        font-weight: bold;
+      }
     }
   }
 }

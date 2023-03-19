@@ -1,5 +1,4 @@
 .category-container {
-  width: fit-content;
   height: 20vw;
   flex: 1 1 auto;
   display: flex;
@@ -7,103 +6,49 @@
   justify-content: center;
   border-style: none solid none none;
   border-color: #af9800;
-  margin: 0 7.5px 15px;
   overflow: hidden;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
   &:hover {
     cursor: pointer;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 6%,
+      rgba(0, 0, 0, 0.09707633053221287) 65%
+    );
 
     & .background-image {
-      transform: scale(1.06);
+      transform: scale(1.05);
       transition: transform 5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
   }
 
-  &.large {
-    height: 380px;
-  }
-
-  &:first-child {
-    margin-right: 7.5px;
-  }
-
-  &:last-child {
-    margin-left: 7.5px;
-  }
-
-  .background-image {
-    width: 100%;
-    height: 100%;
-    background-size: 80%;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    display: flex;
-    align-items: center;
+  .category-body-container {
+    height: 30px;
+    width: 250px;
     justify-content: center;
+    position: absolute;
+    padding: 5px;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
 
-    .category-body-container {
-      height: 30px;
-      width: 250px;
-      justify-content: center;
+    .background-image {
+      width: 14vw;
+      height: auto;
+    }
+
+    .category-title {
       position: absolute;
-      margin-top: 90%;
-      padding: 5px;
-      align-items: center;
-      display: flex;
-      border-radius: 10px;
-
-      h2 {
-        font-style: italic;
-        font-size: 1.8em;
-        color: #000000;
-        margin: auto;
-      }
-
-      h2:before {
-        content: '';
-        position: absolute;
-        top: 65%;
-        left: 0;
-        border-top: 1px solid black;
-        width: 20%;
-        transform: translateY(-50%);
-      }
-      h2:after {
-        content: '';
-        position: absolute;
-        top: 65%;
-        right: 0;
-        border-top: 1px solid black;
-        width: 20%;
-        transform: translateY(-50%);
-      }
+      margin-top: 18vw;
+      font-style: italic;
+      font-size: 1.3vw;
+      color: #000000;
     }
   }
 }
 
 .slot5 {
   border-style: none;
-}
-
-@media only screen and (max-width: 1400px) {
-  .category-body-container h2 {
-    font-size: 20px !important;
-  }
-
-  .category-body-container h2:before {
-    border: none !important;
-  }
-
-  .category-body-container h2:after {
-    border: none !important;
-  }
-}
-
-@media only screen and (max-width: 850px) {
-  .category-body-container {
-    h2 {
-      font-size: 35px;
-    }
-  }
 }
