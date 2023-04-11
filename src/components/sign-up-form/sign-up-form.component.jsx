@@ -48,9 +48,9 @@ const SignUpForm = () => {
 
   return (
     <div>
-      <h2>Create an account</h2>
+      <h2 className="section-title">Create an account</h2>
       <h3 className="email-password-title">Sign up with Email and Password</h3>
-      <form onSubmit={handleSubmit}>
+      <form className="sign-up-form" onSubmit={handleSubmit}>
         <FormInput label="Full Name" type="text" required ref={displayName} />
         <FormInput label="Email" type="email" required ref={email} />
         <FormInput
